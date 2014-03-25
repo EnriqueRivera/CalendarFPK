@@ -313,7 +313,7 @@ namespace FatimasSystem
             try
             {
                 _currentDate = new DateTime(Convert.ToInt32(txtYear.Text), comboMes.SelectedIndex + 1, 1);
-                UpdateCalendar();
+                UpdateCalendar();   //
             }
             catch(FormatException)
             {
