@@ -1,0 +1,34 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="FatimasSystem.AddUserWindow"
+	x:Name="Window"
+	Title="Agregar cliente"
+	Width="325" Height="425" WindowStyle="ToolWindow" ResizeMode="NoResize">
+
+	<Grid x:Name="LayoutRoot">
+		<Label x:Name="lblCurp" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="38.885,10,0,0" VerticalAlignment="Top"><AccessText>*_CURP o ID:</AccessText></Label>
+		<Label x:Name="lblName" Target="{Binding ElementName=txtName}" HorizontalAlignment="Left" Height="30" Margin="37.483,45,0,0" VerticalAlignment="Top"><AccessText>*_Nombre(s):</AccessText></Label>
+		<Label x:Name="lblLastName" Target="{Binding ElementName=txtLastName}" HorizontalAlignment="Left" Height="30" Margin="4.993,80,0,0" VerticalAlignment="Top"><AccessText>*_Apellido paterno:</AccessText></Label>
+		<Label x:Name="lblSLasrName" Target="{Binding ElementName=txtSLastName}" HorizontalAlignment="Left" Height="30" Margin="6.713,115,0,0" VerticalAlignment="Top"><AccessText>Apellido _materno:</AccessText></Label>
+		<Label x:Name="lblCountry" Target="{Binding ElementName=comboCountry}" HorizontalAlignment="Left" Height="30" Margin="72.838,150,0,0" VerticalAlignment="Top"><AccessText>*_País:</AccessText></Label>
+		<Label x:Name="lblState" Target="{Binding ElementName=txtState}" HorizontalAlignment="Left" Height="30" Margin="58.232,185,0,0" VerticalAlignment="Top"><AccessText>*_Estado:</AccessText></Label>
+		<Label x:Name="lblCity" Target="{Binding ElementName=txtCity}" HorizontalAlignment="Left" Height="30" Margin="56.296,220,0,0" VerticalAlignment="Top"><AccessText>*Ciu_dad:</AccessText></Label>
+		<Label x:Name="lblTelephone" Target="{Binding ElementName=txtTelephone}" HorizontalAlignment="Left" Height="30" Margin="47.312,255,0,0" VerticalAlignment="Top"><AccessText>*_Teléfono:</AccessText></Label>
+		<Label x:Name="lblEmail" Target="{Binding ElementName=txtEmail}" HorizontalAlignment="Left" Height="30" Margin="70.339,290,0,0" VerticalAlignment="Top"><AccessText>Ema_il:</AccessText></Label>
+		<Button x:Name="btnAddClient" Content="Agregar" HorizontalAlignment="Left" Margin="130.936,362,0,0" VerticalAlignment="Top" Width="55" Height="25" Click="btnAddClient_Click" Cursor="Hand"/>
+		<ComboBox x:Name="comboCountry" HorizontalAlignment="Left" Height="30" Margin="111.267,150,0,0" VerticalAlignment="Top" Width="195" TabIndex="4"/>
+		<Grid x:Name="gridClientFields" HorizontalAlignment="Left" Height="345" Margin="111.267,10,0,0" VerticalAlignment="Top" Width="195">
+			<TextBox x:Name="txtCurp" HorizontalAlignment="Left" Height="30" Margin="0.002,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="20" Tag="CURP o ID" TabIndex="0" LostFocus="txtCurp_LostFocus"/>
+			<TextBox x:Name="txtName" HorizontalAlignment="Left" Height="30" Margin="0,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="30" Tag="Nombre(s)" TabIndex="1"/>
+			<TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="30" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="20" Tag="Apellido paterno" TabIndex="2"/>
+			<TextBox x:Name="txtSLastName" HorizontalAlignment="Left" Height="30" Margin="0,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="20" TabIndex="3"/>
+			<TextBox x:Name="txtState" HorizontalAlignment="Left" Height="30" Margin="0.669,174.5,-0.667,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="30" Tag="Estado" TabIndex="5"/>
+			<TextBox x:Name="txtCity" HorizontalAlignment="Left" Height="30" Margin="0.669,209.5,-0.669,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="30" Tag="Ciudad" TabIndex="6"/>
+			<TextBox x:Name="txtTelephone" HorizontalAlignment="Left" Height="30" Margin="0.669,244.5,-0.669,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="20" Tag="Teléfono" TabIndex="7"/>
+			<TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="30" Margin="0.669,279.5,-0.669,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="50" TabIndex="8"/>
+			<TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="30" Margin="0.669,314.5,-0.669,-34.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="50" TabIndex="8" Tag="Dirección"/>
+		</Grid>
+		<Label x:Name="lblAddress" Target="{Binding ElementName=txtAddress}" HorizontalAlignment="Left" Height="30" Margin="39.08,325,0,0" VerticalAlignment="Top"><AccessText Text="*_Dirección:"/></Label>
+	</Grid>
+</Window>

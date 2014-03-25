@@ -1,0 +1,53 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="FatimasSystem.ReservationInfo"
+	x:Name="Window"
+	Title="Información de la reservación"
+	Width="466" Height="459" Loaded="Window_Loaded" WindowStyle="ToolWindow" ResizeMode="NoResize">
+
+	<Grid x:Name="LayoutRoot">
+		<TabControl x:Name="infoReservationTabCtrl" HorizontalAlignment="Left" Height="404" Margin="10,10,0,0" VerticalAlignment="Top" Width="431">
+			<TabItem x:Name="tabReservation" Header="Reservación">
+				<Grid Background="#FFE5E5E5">
+					<Label x:Name="lblDepCaption" Content="Departamento:" HorizontalAlignment="Left" Height="30" Margin="58.625,45,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblDep" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,45,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblNumResCaption" Content="Número de reservación:" HorizontalAlignment="Left" Height="30" Margin="11.705,10,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblNumRes" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblFromDateCaption" Content="Fecha de inicio:" HorizontalAlignment="Left" Height="30" Margin="56.745,80,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblFromDate" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblToDateCaption" Content="Fecha de fin:" HorizontalAlignment="Left" Height="30" Margin="71.375,115,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblToDate" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,115,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblNumKidsCaption" Content="Número de niños:" Target="{Binding ElementName=txtNumKids}" HorizontalAlignment="Left" Height="30" Margin="43.211,150,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblNumAdultsCaption" Content="Número de adultos:" Target="{Binding ElementName=txtNumKids}" HorizontalAlignment="Left" Height="30" Margin="32.761,185,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblCommentCaption" Content="Comentario:" Target="{Binding ElementName=txtNumKids}" HorizontalAlignment="Left" Height="30" Margin="73.175,220,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblNumKids" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,150,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblNumAdults" Content="1" HorizontalAlignment="Left" Height="30" Margin="147.921,185,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<TextBlock x:Name="txtComment" HorizontalAlignment="Left" Height="115.04" Margin="147.921,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266.079" FontWeight="Bold"/>
+					<Button x:Name="btnDeleteReservatio" Content="Eliminar reservación" HorizontalAlignment="Left" Height="26" Margin="137,340.04,0,0" VerticalAlignment="Top" Width="137" Cursor="Hand" Click="btnDeleteReservatio_Click"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="tabClient" Header="Cliente">
+				<Grid Background="#FFE5E5E5">
+					<Label x:Name="lblCurpCaption" Content="CURP o ID:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="52.596,10,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblFullNameCaption" Content="Nombre completo:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="10,45,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblCountryCaption" Content="País:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="86.55,80,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblStateCaption" Content="Estado:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="71.942,115,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblCityCaption" Content="Ciudad:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="70.008,150,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblTelephoneCaption" Content="Telefono:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="61.023,185,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblEmailCaption" Content="Email:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="79.048,220,0,0" VerticalAlignment="Top"/>
+					<Button x:Name="btnVerAgregarPagos" Content="Ver / Agregar pagos" HorizontalAlignment="Left" Height="26" Margin="139,325,0,0" VerticalAlignment="Top" Width="137" Cursor="Hand" Click="btnVerAgregarPagos_Click"/>
+					<Label x:Name="lblCurp" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblFullName" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,45,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblCountry" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,80,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblState" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,115,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblCity" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,150,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblTelephone" Content="1" HorizontalAlignment="Left" Height="30" Margin="124.976,185,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblEmail" Content="" HorizontalAlignment="Left" Height="30" Margin="124.976,220,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+					<Label x:Name="lblAddressCaption" Content="Dirección:" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="57.791,255,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="lblAddress" Content="" HorizontalAlignment="Left" Height="30" Margin="124.998,255,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
+	</Grid>
+</Window>

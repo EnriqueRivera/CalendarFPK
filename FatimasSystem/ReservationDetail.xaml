@@ -1,0 +1,14 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="FatimasSystem.ReservationDetail"
+	x:Name="Window"
+	Title="ReservationDetail"
+	Width="650" Height="560" Loaded="Window_Loaded">
+
+	<Grid x:Name="LayoutRoot">
+		<ScrollViewer x:Name="reservationScrollV" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
+			<StackPanel x:Name="reservationStackP"/>
+		</ScrollViewer>
+	</Grid>
+</Window>

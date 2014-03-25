@@ -1,0 +1,35 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="FatimasSystem.AddReservation"
+	x:Name="Window"
+	Title="Agregar reservación"
+	Width="420" Height="420" WindowStyle="ToolWindow" ResizeMode="NoResize">
+
+	<Grid x:Name="LayoutRoot">
+		<Label x:Name="lblCurp" Target="{Binding ElementName=txtCurp}" HorizontalAlignment="Left" Height="30" Margin="4.999,45,0,0" VerticalAlignment="Top"><AccessText>*_CURP o ID del cliente:</AccessText></Label>
+		<TextBox x:Name="txtCurp" HorizontalAlignment="Left" Height="30" Margin="139.973,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" MaxLength="20" Tag="CURP o ID" TabIndex="0" IsEnabled="False"/>
+		<Label x:Name="lblDepCaption" Content="Departamento:" HorizontalAlignment="Left" Height="30" Margin="40.694,10,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="lblDep" Content="1" HorizontalAlignment="Left" Height="30" Margin="139.973,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+		<Label x:Name="lblFromDateCaption" Content="Fecha de inicio:" HorizontalAlignment="Left" Height="30" Margin="38.814,80,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="lblToDate" Target="{Binding ElementName=toDatePicker}" HorizontalAlignment="Left" Height="30" Margin="48.441,115,0,0" VerticalAlignment="Top"><AccessText>*_Fecha de fin:</AccessText></Label>
+		<DatePicker x:Name="toDatePicker" HorizontalAlignment="Left" Height="30" Margin="139.971,115,0,0" VerticalAlignment="Top" Width="230.002" IsTabStop="True" TabIndex="2" Cursor="Hand"/>
+		<Label x:Name="lblFromDate" Content="FromDate" HorizontalAlignment="Left" Height="30" Margin="139.972,80,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="lblNumAdults" Target="{Binding ElementName=txtNumAdults}" HorizontalAlignment="Left" Height="30" Margin="9.827,185,0,0" VerticalAlignment="Top"><AccessText>*Número de _adultos:</AccessText></Label>
+		<TextBox x:Name="txtNumAdults" HorizontalAlignment="Left" Height="30" Margin="139.971,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39.666" MaxLength="2" Tag="CURP o ID" TabIndex="4" KeyDown="txtNumKids_KeyDown"/>
+		<Label x:Name="lblNumKids" Target="{Binding ElementName=txtNumKids}" HorizontalAlignment="Left" Height="30" Margin="20.277,150,0,0" VerticalAlignment="Top"><AccessText>*Número de _niños:</AccessText></Label>
+		<TextBox x:Name="txtNumKids" HorizontalAlignment="Left" Height="30" Margin="139.973,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39.666" MaxLength="2" Tag="CURP o ID" TabIndex="3" KeyDown="txtNumKids_KeyDown"/>
+		<Button x:Name="btnFindGuest" HorizontalAlignment="Left" Height="30" Margin="339.973,45,0,0" VerticalAlignment="Top" Width="30" TabIndex="1" Cursor="Hand" Click="btnFindGuest_Click" ToolTip="Buscar clientes">
+			<Image x:Name="imgFind" Source="Images/Find.png" Stretch="Fill"/>
+		</Button>
+		<Label x:Name="lblComment" Target="{Binding ElementName=txtComment}" HorizontalAlignment="Left" Height="30" Margin="55.244,220,0,0" VerticalAlignment="Top"><AccessText>C_omentario:</AccessText></Label>
+		<Button x:Name="btnAddReservation" Content="Agregar" HorizontalAlignment="Left" Margin="180.269,357,0,0" VerticalAlignment="Top" Width="55" Height="25" Cursor="Hand" IsEnabled="False" Click="btnAddReservation_Click"/>
+		<RichTextBox x:Name="txtComment" HorizontalAlignment="Left" Height="128.667" Margin="139.971,220,0,0" VerticalAlignment="Top" Width="265.002">
+			<FlowDocument/>
+		</RichTextBox>
+		<Button x:Name="btnAddClient" HorizontalAlignment="Left" Height="30" Margin="374.973,45,0,0" VerticalAlignment="Top" Width="30" TabIndex="1" Cursor="Hand" Click="btnAddClient_Click" ToolTip="Agregar cliente">
+			<Image x:Name="imgAddClient" Source="Images/add_user.png" Stretch="Fill"/>
+		</Button>
+		
+	</Grid>
+</Window>
